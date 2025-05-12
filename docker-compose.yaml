@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  news-fetcher:
+    build:
+      context: ./news_fetcher
+      dockerfile: Dockerfile
+    container_name: news-fetcher-container
+    environment:
+      - NEWSDATA_API_KEY=pub_85972477dd914f68877f6cbb467a701ce2c16
+      - FETCH_INTERVAL=120
+      - TOPIC=technology
+    ports:
+      - "8000:8000"
+    restart: always
+
+  news-api:
+    build:
+      context: ./news_api
+    container_name: news-api
+    ports:
+      - "8001:8000"

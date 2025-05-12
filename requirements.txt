@@ -1,0 +1,4 @@
+redis
+prometheus_client
+requests
+flask
