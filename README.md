@@ -46,7 +46,6 @@ SMEMBERS category:[cateogry name]
    ```bash
    cp .env.example .env
    ```
-4. Edit `.env` with your API keys for VAPI and Gumloop
 
 ## Usage
 
